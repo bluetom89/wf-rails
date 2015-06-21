@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
-  root 'root#index'
 
-  # get '/snackbar' => 'snackbar#index'
-  # get '/buttons' => 'buttons#index'
-  # get '/dropdown' => 'dropdown#index'
-  # get '/input-field' => 'input_field#index'
-  # get '/tab-menu' => 'tab_menu#index'
-  # get '/group-buttons' => 'group_buttons#index'
-  # get '/popup' => 'popup#index'
-  # get '/tables' => 'tables#index'
+  root 'layout#index'
+
+  # get '/save/(:id)' => 'wf#save'
+  # get '/load/(:id)' => 'wf#load'
+  # get '/destroy/(:id)' => 'wf#destroy'
+
+  # get '/create' => 'wf#create'
 
 end

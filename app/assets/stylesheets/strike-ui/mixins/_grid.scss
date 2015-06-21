@@ -1,6 +1,0 @@
-
-@mixin make-col($size) {
-  width: percentage($size / $grid-columns);
-  float: left;
-  padding: 0 15px;
-}
