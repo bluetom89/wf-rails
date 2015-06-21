@@ -1269,3 +1269,849 @@ ActionView::Template::Error (couldn't find file '/home/tb/dev/wf-rails/app/asset
   Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
   Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
   Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (26.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:40:58 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (1122.2ms)
+Completed 500 Internal Server Error in 1132ms
+
+ActionView::Template::Error (couldn't find file '/home/tb/dev/wf-rails/app/assets/stylesheets/strike-ui/mixins'
+  (in /home/tb/dev/wf-rails/app/assets/stylesheets/strike-ui.scss)):
+     6:     %meta{ content: 'IE=Edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+  app/views/layout/index.haml:9:in `_app_views_layout_index_haml___1315226202176205380_44154420'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (15.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (34.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:41:21 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (1914.1ms)
+Completed 500 Internal Server Error in 1917ms
+
+ActionView::Template::Error (/home/tb/dev/wf-rails/app/assets/stylesheets/wf.scss has already been required):
+     6:     %meta{ content: 'IE=Edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+  app/views/layout/index.haml:9:in `_app_views_layout_index_haml___1315226202176205380_44154420'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (61.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (12.1ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (25.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:42:02 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (1960.2ms)
+Completed 500 Internal Server Error in 1962ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( wf_main.css )` to `config/initializers/assets.rb` and restart your server):
+     6:     %meta{ content: 'IE=Edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf_main # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+  app/views/layout/index.haml:9:in `_app_views_layout_index_haml___1315226202176205380_61580700'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (12.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (25.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:42:18 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (18.4ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( wf_main.css )` to `config/initializers/assets.rb` and restart your server):
+     6:     %meta{ content: 'IE=Edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf_main # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+  app/views/layout/index.haml:9:in `_app_views_layout_index_haml___175602013999092449_46234540'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (12.1ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (27.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:43:10 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (2.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( wf_main.css )` to `config/initializers/assets.rb` and restart your server):
+     6:     %meta{ content: 'IE=Edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf_main # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+  app/views/layout/index.haml:9:in `_app_views_layout_index_haml___175602013999092449_46234540'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (11.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (25.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/_wf_popup.haml (1.0ms)
+  Rendered layout/_wf_panel.haml (5.9ms)
+  Rendered layout/index.haml (264.1ms)
+Completed 200 OK in 272ms (Views: 271.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/colorpicker-5f85b4e26c70868f9365701eca7bde11.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/jquery-ui-dc463901115447c2318ca1b57198177a.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/old/fonts-4ac56c40db71713d630fab23c51866d4.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/old/helpers-b578e79f44cea20b481de6092ea40f8f.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/old/main-2ac1e4fc5b98674cba1f26b9f6f63746.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/old/popup-370329d44afb0f13ad8d8c3a57824314.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/old/shapes-097d326d41519344c94cca3133b2603e.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/wf_helpers-17d2de0abc3333d4f5cea702413186b3.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/wf_fonts-7026e2c8d78abf3beff509ef6815e745.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/wf_panel-1be9c85d600280a60152246222839355.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/wf_popup-2c05245f1a4daac7b42bcc423862bb20.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/wf_shapes-9250b3bbed311efde2e7060766b1b5ec.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/assets/wf_main-b46c14d8f0a665986a1038afb4ec79ac.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+
+Started GET "/javascripts/app.js" for 127.0.0.1 at 2015-06-21 13:43:17 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/app.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.0) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.6.0) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.0) lib/rack/server.rb:286:in `start'
+  railties (4.2.0) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<main>'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (15.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (31.9ms)
+
+
+Started GET "/assets/wf_fonts" for 127.0.0.1 at 2015-06-21 13:43:18 +0200
+
+
+Started GET "/assets/wf_popup" for 127.0.0.1 at 2015-06-21 13:43:18 +0200
+
+
+Started GET "/assets/wf_shapes" for 127.0.0.1 at 2015-06-21 13:43:18 +0200
+
+
+Started GET "/assets/wf_helpers" for 127.0.0.1 at 2015-06-21 13:43:18 +0200
+
+
+Started GET "/assets/wf_panel" for 127.0.0.1 at 2015-06-21 13:43:18 +0200
+
+
+Started GET "/img/ui-bg_glass_20_555555_1x400.png" for 127.0.0.1 at 2015-06-21 13:43:18 +0200
+
+ActionController::RoutingError (No route matches [GET] "/img/ui-bg_glass_20_555555_1x400.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.0) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.6.0) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.0) lib/rack/server.rb:286:in `start'
+  railties (4.2.0) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<main>'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (12.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (26.3ms)
+
+
+Started GET "/assets/fonts/SourceSansPro-Regular.otf" for 127.0.0.1 at 2015-06-21 13:43:18 +0200
+
+
+Started GET "/img/ui-icons_cccccc_256x240.png" for 127.0.0.1 at 2015-06-21 13:43:18 +0200
+
+ActionController::RoutingError (No route matches [GET] "/img/ui-icons_cccccc_256x240.png"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.0) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.6.0) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.0) lib/rack/server.rb:286:in `start'
+  railties (4.2.0) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<main>'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (13.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (35.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:46:25 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (228.4ms)
+Completed 500 Internal Server Error in 230ms
+
+ActionView::Template::Error (Undefined variable: "$whitesmoke".
+  (in /home/tb/dev/wf-rails/app/assets/stylesheets/wf_main.scss:41)):
+     6:     %meta{ content: 'IE=Edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf_main # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+  app/assets/stylesheets/wf_main.scss:41
+  app/views/layout/index.haml:9:in `_app_views_layout_index_haml__1082929230079909415_49633340'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (12.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (26.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:47:06 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/_wf_popup.haml (0.1ms)
+  Rendered layout/_wf_panel.haml (0.1ms)
+  Rendered layout/index.haml (1302.8ms)
+Completed 200 OK in 1305ms (Views: 1305.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/wf_main-73b2592f0bd440890e11f75cd9689e05.css?body=1" for 127.0.0.1 at 2015-06-21 13:47:07 +0200
+
+
+Started GET "/javascripts/app.js" for 127.0.0.1 at 2015-06-21 13:47:07 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/app.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.0) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.6.0) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.0) lib/rack/server.rb:286:in `start'
+  railties (4.2.0) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<main>'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.1ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (12.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (25.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:47:16 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/_wf_popup.haml (0.1ms)
+  Rendered layout/_wf_panel.haml (0.1ms)
+  Rendered layout/index.haml (49.1ms)
+Completed 200 OK in 51ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/wf_main-73b2592f0bd440890e11f75cd9689e05.css?body=1" for 127.0.0.1 at 2015-06-21 13:47:16 +0200
+
+
+Started GET "/javascripts/app.js" for 127.0.0.1 at 2015-06-21 13:47:16 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/app.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.0) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.6.0) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.0) lib/rack/server.rb:286:in `start'
+  railties (4.2.0) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<main>'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (14.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (31.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:47:39 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/_wf_popup.haml (0.1ms)
+  Rendered layout/_wf_panel.haml (0.1ms)
+  Rendered layout/index.haml (41.3ms)
+Completed 200 OK in 43ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/wf_main-73b2592f0bd440890e11f75cd9689e05.css?body=1" for 127.0.0.1 at 2015-06-21 13:47:39 +0200
+
+
+Started GET "/javascripts/app.js" for 127.0.0.1 at 2015-06-21 13:47:39 +0200
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/app.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.0) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  thin (1.6.3) lib/thin/connection.rb:86:in `block in pre_process'
+  thin (1.6.3) lib/thin/connection.rb:84:in `catch'
+  thin (1.6.3) lib/thin/connection.rb:84:in `pre_process'
+  thin (1.6.3) lib/thin/connection.rb:53:in `process'
+  thin (1.6.3) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.7) lib/eventmachine.rb:187:in `run'
+  thin (1.6.3) lib/thin/backends/base.rb:73:in `start'
+  thin (1.6.3) lib/thin/server.rb:162:in `start'
+  rack (1.6.0) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.0) lib/rack/server.rb:286:in `start'
+  railties (4.2.0) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.0) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.0) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<main>'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (18.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (38.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:48:09 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (114.1ms)
+Completed 500 Internal Server Error in 116ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( app.js )` to `config/initializers/assets.rb` and restart your server):
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf_main # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+    13:       / Le HTML5 shim, for IE6-8 support of HTML elements
+  app/views/layout/index.haml:10:in `_app_views_layout_index_haml__1082929230079909415_49633340'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (1.0ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (16.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (35.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:48:10 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (19.1ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( app.js )` to `config/initializers/assets.rb` and restart your server):
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf_main # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+    13:       / Le HTML5 shim, for IE6-8 support of HTML elements
+  app/views/layout/index.haml:10:in `_app_views_layout_index_haml__1082929230079909415_49633340'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (18.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (39.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:49:01 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (14.1ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( app.js )` to `config/initializers/assets.rb` and restart your server):
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf_main # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+    13:       / Le HTML5 shim, for IE6-8 support of HTML elements
+  app/views/layout/index.haml:10:in `_app_views_layout_index_haml__1082929230079909415_49633340'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (13.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (28.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:49:02 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/index.haml (12.7ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( app.js )` to `config/initializers/assets.rb` and restart your server):
+     7:     %title 'WF/Designer'
+     8:     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
+     9:     = stylesheet_link_tag :wf_main # , :media => 'all'
+    10:     = javascript_include_tag :app
+    11: 
+    12:     /[if lt IE 9]
+    13:       / Le HTML5 shim, for IE6-8 support of HTML elements
+  app/views/layout/index.haml:10:in `_app_views_layout_index_haml__1082929230079909415_49633340'
+
+
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (14.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.5ms)
+  Rendered /home/tb/.rvm/gems/ruby-2.1.5/gems/web-console-2.1.0/lib/web_console/templates/index.html (30.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/_wf_popup.haml (2.7ms)
+  Rendered layout/_wf_panel.haml (10.6ms)
+  Rendered layout/index.haml (293.6ms)
+Completed 200 OK in 304ms (Views: 303.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/wf_main-73b2592f0bd440890e11f75cd9689e05.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/old/board_not_used-0c90d3745d8c2c8f93f49b95452be309.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/old/wf_func_not_used-fb58b8a3338a5cf87e0b47ffd92c37ed.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/vendor/colorpicker-55ed9d3f72bb1538f27aca5c9b9869de.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/vendor/jquery-jsplumb-3d92da4c22303f1d2c58f6b1c2be78ff.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/vendor/jquery-ui.min-72953b08ee74ad2c1867f40e18dee97c.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/vendor/jquery.min-eb49ca5442eaf85a42aa9d3d47a8cbde.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/wf-8fc0edf32dcfe5903ee3284fc4208ca1.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/wf/wf_functions-d5d660c8f0aa7c4705d7b22f40557392.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/wf/wf_panel-0428c9effaca0d04bee531da29f16289.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/app-cc4c130a8dedc12bebdfa6fe863fd384.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:09 +0200
+
+
+Started GET "/assets/wf_main-73b2592f0bd440890e11f75cd9689e05.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:11 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:49:49 +0200
+Processing by LayoutController#index as HTML
+  Rendered layout/_wf_popup.haml (0.1ms)
+  Rendered layout/_wf_panel.haml (0.1ms)
+  Rendered layout/index.haml (83.1ms)
+Completed 200 OK in 86ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/wf_main-73b2592f0bd440890e11f75cd9689e05.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/old/board_not_used-0c90d3745d8c2c8f93f49b95452be309.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/old/wf_func_not_used-fb58b8a3338a5cf87e0b47ffd92c37ed.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/vendor/colorpicker-55ed9d3f72bb1538f27aca5c9b9869de.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/vendor/jquery-jsplumb-3d92da4c22303f1d2c58f6b1c2be78ff.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/vendor/jquery-ui.min-72953b08ee74ad2c1867f40e18dee97c.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/vendor/jquery.min-eb49ca5442eaf85a42aa9d3d47a8cbde.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/wf-8fc0edf32dcfe5903ee3284fc4208ca1.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/wf/wf_functions-d5d660c8f0aa7c4705d7b22f40557392.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/wf/wf_panel-0428c9effaca0d04bee531da29f16289.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
+
+
+Started GET "/assets/app-cc4c130a8dedc12bebdfa6fe863fd384.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:50 +0200
