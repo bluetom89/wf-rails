@@ -1,0 +1,144 @@
+
+#header #title{ 
+    font-family: source_sans_problack;
+    font-size: 1.3em;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#header #title #logo {
+    position: absolute;
+    display: block;
+    background: none;
+}
+#header #title .text {
+    margin-left: 65px;
+}
+#header #title:hover {
+    cursor: pointer;
+}
+#header #title span {
+    font-family: source_sans_regular;
+}
+#header #title #project_btn {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    font-size: 1.3em;
+    height: 16px;
+    left: 250px;
+    position: absolute;
+    top: 10px;
+    width: 16px;
+}
+
+#left_panel_btn:hover {
+    cursor: pointer;
+    
+}
+
+#left_panel #project_details {
+    display: block;
+    height: 110px;
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+}
+#left_panel #project_details #options_btn {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 33px;
+    width: 170px;
+}
+#left_panel #project_details #endpoints_btn {
+    display: inline-block;
+    border: 1px solid #2c3e50;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 0 15px;
+    width: 120px;
+}
+#left_panel #project_details #resizing_btn {
+    display: inline-block;
+    margin-left: 10px;
+    border: 1px solid #2c3e50;
+    margin-top: 5px;
+    padding: 0 15px;
+    width: 120px;
+}
+#left_panel #project_details #dragging_btn {
+   display: inline-block;
+    margin-left: 10px;
+    border: 1px solid #2c3e50;
+    margin-top: 5px;
+    padding: 0 15px;
+    width: 120px;
+}
+#left_panel #project_details .status {
+}
+#left_panel #project_details #workflow_name {
+    float: right;
+    width: 65%;
+    font-size: 14px;
+}
+#left_panel #add_item {
+    margin:0; padding: 0;
+    position: relative;
+    height: 80%;
+    display: block;
+    z-index: 10;
+}
+
+#left_panel #add_item #add_item_label {
+    float: right;
+    width: 65%;
+    font-size: 14px;
+}
+#left_panel #add_item .item {
+  display: inline-block;
+  float: left;
+  margin: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 2px black;
+}
+#left_panel #add_item .item:hover {
+    cursor: pointer;
+}
+#left_panel #add_item .item span {
+    top: 40%;
+    color: black;
+}
+#left_panel #predefined {
+    position: absolute;
+    display: block;
+    float: left;
+    margin: 180px auto;
+    width: 95%;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+#left_panel #predefined ul {
+    list-style: none;
+}
+
+#left_panel #predefined ul li {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#left_panel #list_item {
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+}
+#left_panel #list_item .ui-selecting { outline: #FECA40 dotted; }
+#left_panel #list_item .ui-selected { outline: #FECA40 dotted; color: white; }
+#left_panel #list_item .item {
+    line-height: 18px;
+    width: 98%;
+    float: right;
+    font-size: 1.1em;
+    
+    
+}

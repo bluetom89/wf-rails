@@ -1,0 +1,93 @@
+h1 {
+  font-family: 'Urban Grotesk';
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Urban Grotesk';
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: 'Urban Grotesk';
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h5 {
+  font-family: 'Urban Grotesk';
+  font-size: 14px;
+  font-weight: 400;
+}
+
+h6 {
+  font-family: 'Urban Grotesk';
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.text-primary {
+  color: $gray;
+}
+
+.text-secondary {
+  color: $gray-50p;
+}
+
+.text-disabled {
+  color: $gray-20p;
+}
+
+p {
+  font-family: 'Urban Grotesk';
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.text-truncate {
+  position: relative;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 50px;
+    height: 20px;
+
+    text-align: right;
+
+    background: transparent linear-gradient(to right, rgba(255, 255, 255, 0), #FFF 50%) repeat scroll 0% 0%;
+
+    content: '';
+  }
+
+  &-small::after {
+    height: 14px;
+    width: 20px;
+  }
+
+  &-big::after {
+    height: 28px;
+  }
+
+  &-gray::after {
+    background: transparent linear-gradient(to right, rgba($gray-10p, 0), $gray-10p 50%) repeat scroll 0% 0%;
+  }
+}
+
+.text-truncate-multiline {
+  @extend .text-truncate;
+
+  white-space: normal;
+}

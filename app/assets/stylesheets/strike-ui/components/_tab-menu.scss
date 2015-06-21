@@ -1,0 +1,57 @@
+// Tab menu
+
+.tab-menu {
+  border-collapse: separate;
+  color: $gray;
+  display: table;
+  font-size: 16px;
+  height: 40px;
+  margin-bottom: 8px;
+  table-layout: fixed;
+  width: 100%;
+
+  .tab {
+    background-color: $gray-5p;
+    border-bottom: 1px solid $gray-20p;
+    border-top: 1px solid $gray-20p;
+    color: $gray-100p;
+    cursor: pointer;
+    display: table-cell;
+    padding: 10px 0 0 16px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: auto;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &::before, &:last-child::after {
+      background-color: $gray-20p;
+      content: '&nbsp';
+      height: 100%;
+      position: absolute;
+      text-indent: -9999px;
+      top: 0;
+      width: 1px;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &:last-child::after {
+      right: 0;
+    }
+
+    &.active {
+      background-color: $white;
+      border-bottom: 0;
+      border-top: 4px solid $orange;
+      color: $orange;
+      font-weight: 700;
+      padding-top: 6px;
+    }
+  }
+}

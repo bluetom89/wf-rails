@@ -1,0 +1,15 @@
+/*
+ * Button mixin
+ */
+
+@mixin btn-color($color, $background, $hover) {
+  background-color: $background;
+  border-color: $hover;
+  color: $color;
+
+  &:hover,
+  &:active {
+    background-color: $hover;
+    border-color: $hover;
+  }
+}

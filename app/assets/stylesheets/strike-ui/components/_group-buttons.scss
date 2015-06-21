@@ -1,0 +1,55 @@
+// Group buttons
+
+.group-buttons {
+  border: 1px solid $gray-20p;
+  border-top: 0;
+  color: $gray-60p;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  height: 30px;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  a {
+    color: $gray-60p!important;
+  }
+
+  .group-btn {
+    transition: border-color 200ms, background-color 200ms;
+
+    border-top: 1px solid $gray-20p;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 100%;
+    min-width: 80px;
+    padding: 8px 20px 7px;
+    position: relative;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:hover, &:active {
+      background-color: $gray-5p;
+    }
+
+    &:not(:first-child)::before {
+      background-color: $gray-20p;
+      content: '&nbsp';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      text-indent: -9999px;
+      top: 0;
+      width: 1px;
+    }
+
+    &.active {
+      background-color: $gray-10p;
+      border-top: 4px solid $gray-30p;
+      padding-top: 5px;
+    }
+  }
+}

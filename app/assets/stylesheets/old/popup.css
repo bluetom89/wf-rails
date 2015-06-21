@@ -1,0 +1,164 @@
+#pop_up{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+}
+#pop_up .ui-button {
+        margin-left: 10px;
+    margin-top: 5px;
+    padding: 0 15px;
+}
+#pop_up #edit{ 
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 12px -1px rgba(50, 50, 50, 0.6) inset;
+    color: #000000;
+    display: block;
+    height: auto;
+    margin: 100px auto;
+    padding: 10px 20px 40px 20px;
+    position: relative;
+    width: 500px;
+    z-index: 1100;
+}
+#pop_up #edit h1{
+    width: 100%;
+    text-align: center;
+}
+#pop_up #edit h3{
+    width: 100%;
+    text-align: center;
+}
+#pop_up #edit label {
+   float: left;
+    line-height: 28px;
+    text-align: right;
+    width: 30%;
+}
+#pop_up #edit input {
+    float: left;
+    width: 50%;
+    text-align: left;
+    padding: 5px;
+}
+#pop_up #edit textarea {
+    display: block;
+    float: left;
+    width: 50%;
+    text-align: left;
+    resize: none;
+    height: 100px;
+    padding: 5px;
+}
+#pop_up #edit #fields {
+    width: 100%;
+    height: auto;
+    
+}
+#pop_up #edit #fields span {     
+    display: inline-block;
+    overflow: visible;
+}
+#pop_up #edit #fields input {
+    width: 20px;
+}
+#pop_up #edit #fields label {
+  text-align: left;
+    width: 130px;
+}
+#pop_up #edit #colorpicker {
+    position: relative;
+    width:200px;
+    height: 100px;
+    display: block;
+}
+#pop_up #conn {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 12px -1px rgba(50, 50, 50, 0.6) inset;
+    color: #000000;
+    display: block;
+    height: auto;
+    margin: 100px auto;
+    padding: 10px 20px 40px 20px;
+    position: relative;
+    width: 500px;
+    z-index: 1100;
+}
+#pop_up #conn h1{
+    width: 100%;
+    text-align: center;
+}
+#pop_up #conn label {
+    width: 30%;
+    text-align: right;
+    float: left;
+}
+#pop_up #conn input {
+    float: left;
+    width: 50%;
+    text-align: left;
+    padding: 5px;
+}
+
+#pop_up #add_fields {
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+#pop_up #add_field_btn {
+    cursor: pointer;
+    height: 16px;
+    left: 330px;
+    margin-top: -1px;
+    position: absolute;
+    width: 16px;
+}
+#pop_up #fields {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    width: 400px;
+}
+#pop_up #fields input{
+    width: 40%;
+    text-align: center;
+    padding: 5px;
+}
+
+#pop_up #loader {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 12px -1px rgba(50, 50, 50, 0.6) inset;
+    color: #000000;
+    display: block;
+    height: auto;
+    margin: 100px auto;
+    padding: 10px 20px 40px 20px;
+    position: relative;
+    width: 500px;
+    z-index: 1100;
+}
+#pop_up #loader #load_list {
+    
+}
+#pop_up #loader #load_list li {
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 85%;
+    color: black;
+}
+#pop_up #loader #load_list .ui-selecting { background: #FECA40; }
+#pop_up #loader #load_list .ui-selected { background: #F39814; color: white;  }
+
+#pop_up #export {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 0 12px -1px rgba(50, 50, 50, 0.6) inset;
+    color: #000000;
+    display: block;
+    height: auto;
+    margin: 100px auto;
+    padding: 10px 20px 40px 20px;
+    position: relative;
+    width: 500px;
+    z-index: 1100;
+}

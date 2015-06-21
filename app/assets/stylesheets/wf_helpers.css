@@ -1,0 +1,107 @@
+.w100 {    width: 100%;}
+.w90 {    width: 90%;}
+.w80 {    width: 80%;}
+.w50 {    width: 50%;}
+.w40 {    width:40%;}
+.w30 { width: 30%;}
+.w20 {    width: 20%;}
+.w25 {    width: 25%;}
+.w15 {    width: 15%;}
+.w10 {    width: 10%;}
+
+.txCenter {    text-align: center;}
+.txLeft {    text-align: left;}
+.txRight {    text-align: right;}
+
+.txWhite {    color: whitesmoke;    }
+.txGray {    color: #aeb0c1;}
+.txdGray { color:#666666; } 
+.txBlue {    color:#2c3e50;}
+.txBlack {    color:black;}
+.txGreen { color: #45AD54;}
+.txRed {color:#ee3636; }
+
+.bgTransparent {    background-color: transparent;}
+
+.bgBlue {    background-color: #2c3e50;}
+.bglBlue { background-color: #00acef;}
+.bgGray { background-color: #cccccc; }
+.bglGray { background-color: #ecf0f1; }
+.bgYellow { background-color: #f4c347; }
+.bglYellow { background-color: #fff100; }
+.bgOrange { background-color: #f4901f; }
+.bgPink { background-color: #f4587d; }
+.bglPink { background-color: #ea667a;}
+.bgPurple {  background-color: #9569a2;}
+.bgGreen {    background-color: #45AD54;}
+.bglPurple {    background-color: #98a2d0;}
+.bgRed {    background-color: #E03C3C;}
+.bgAqua {    background-color: #33c6da;}
+.borderGray {    border: 1px solid #cccccc; }
+.borderlGray{    border: 1px solid #ecf0f1;}
+.borderBlue {    border: 1px solid #2c3e50;}
+
+.dot {
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #2c3e50;
+    width: 10px;
+    height: 10px;
+    text-indent: -5000px;
+    margin-top: 5px;
+}
+
+.row {
+    display: inline-block;
+}
+
+.margt5 {    margin-top: 3px;}
+.margt20 {    margin-top: 20px;}
+.margt40 {    margin-top: 40px;}
+.margt60 {    margin-top: 60px;}
+.margt80 {    margin-top: 80px;}
+.margt100 {    margin-top: 100px;}
+.margt200 {    margin-top: 200px;}
+
+.margt-n5 {    margin-top: -5px;}
+.margt-n20 {    margin-top: -20px;}
+.margt-n40 {    margin-top: -40px;}
+.margt-n60 {    margin-top: -60px;}
+
+.margr20 {    margin-right: 20px;}
+.margr40 {    margin-right: 40px;}
+.margr60 {    margin-right: 60px;}
+.margr80 {    margin-right: 80px;}
+.margr100 {    margin-right: 100px;}
+
+.margl20 {    margin-left: 20px;}
+.margl40 {    margin-left: 40px;}
+.margl60 {    margin-left: 60px;}
+.margl70 {    margin-left: 70px;}
+.margl80 {    margin-left: 80px;}
+.margrl00 {    margin-left: 100px;}
+
+.iconBig {    padding: 10px;    margin-left: 1px;}
+.iconBig:hover {    border: 1px solid #2c3e50;}
+.iconSmall {    padding: 5px;    margin-left: 1px;}
+
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.float_l {
+    float:left;
+}
+.float_r {
+    float: right;
+}
+
+p {
+    font-size: 14px;
+}
+.clear { margin-top: 10px; clear:both; }
+ .ui-dialog .ui-state-error { padding: .3em; }
+.validateTips { border: 1px solid transparent; padding: 0.3em; }
+hr { margin-top: 10px; margin-bottom: 10px; color: #2c3e50;}

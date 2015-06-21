@@ -1,0 +1,27 @@
+// scss-lint:disable VendorPrefix, Indentation
+
+@mixin user-select($arg) {
+  -webkit-user-select: $arg;
+     -moz-user-select: $arg;
+      -ms-user-select: $arg;
+          user-select: $arg;
+}
+
+@mixin box-shadow($args...) {
+  -webkit-box-shadow: $args;
+          box-shadow: $args;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+     -moz-transform: $args;
+      -ms-transform: $args;
+          transform: $args;
+}
+// scss-lint:enable VendorPrefix, Indentation
