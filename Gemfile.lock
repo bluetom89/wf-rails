@@ -1,7 +1,8 @@
-PATH
-  remote: git@github.com:bluetom89/wf-rails.git
+GIT
+  remote: ssh://git@git.dev.striketech.pl:2222/internal/strike-ui.git
+  revision: 46ca5be239cdd39d0f2ed10aad77d82887471308
   specs:
-    wf-rails (0.1)
+    strike-ui (0.0.38)
       autoprefixer-rails
       bundler
       ejs
@@ -47,7 +48,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
-    autoprefixer-rails (5.1.11)
+    autoprefixer-rails (5.2.0.1)
       execjs
       json
     binding_of_caller (0.7.2)

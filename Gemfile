@@ -31,8 +31,8 @@ gem 'haml'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# gem 'wf-rails', path: '..'
-gem 'wf-rails', git: 'git@github.com:bluetom89/wf-rails.git'
+# gem 'strike-ui', path: '..'
+gem 'strike-ui', git: 'ssh://git@git.dev.striketech.pl:2222/internal/strike-ui.git'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
