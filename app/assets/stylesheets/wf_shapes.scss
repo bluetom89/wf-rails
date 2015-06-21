@@ -1,0 +1,428 @@
+.process {
+    background-color: $white;
+    border: 1px solid $black;
+    height: 70px;
+    width: 150px;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    span {
+        left: 4px;
+        position: absolute;
+        text-align: center;
+        top: 35%;
+        width: 100%;
+    }
+}
+.decision {
+    background: none repeat scroll 0 0 $white;
+    border: 1px solid $black;
+    height: 100px;
+    position: absolute;
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(45deg);
+    width: 100px;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    span {
+        position: absolute;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-45deg);
+        top: 35%;
+        width: 100%;
+        text-align: center;
+    }
+}
+.circle {
+    background: none repeat scroll 0 0 $white;
+    border: 1px solid $black;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    height: 100px;
+    line-height: 0;
+    width: 100px;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    span {
+        position: absolute;
+        top: 45%;
+        width: 100%;
+        text-align: center;
+    }
+}
+.parallelogram {
+    border: 1px solid $black;
+    background-color: $white;
+    height: 75px;
+    width: 115px;
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: skew(20deg);
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    span {
+        position: absolute;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: skew(-20deg);
+        top: 30%;
+        width: 100%;
+        text-align: center;
+    }
+}
+.parallelogramRight {
+    border: 1px solid $black;
+    background-color: $white;
+    height: 75px;
+    width: 115px;
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: skew(-20deg);
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    span {
+        position: absolute;
+        top: 30%;
+        width: 100%;
+        text-align: center;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: skew(20deg);
+    }
+}
+.trapezoid-up {
+    border: 1px solid $black;
+    border-bottom: 75px solid $white;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    height: 0;
+    width: 115px;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    &:before {
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 5px 0 $mine_shaft_95;
+    }
+}
+.trapezoid-down {
+    height: 35px;
+    overflow: hidden;
+    width: 100px;
+    &:before {
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 5px 0 $mine_shaft_95;
+    }
+}
+.trapezoid-left {
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    border-bottom: 50px solid $white;
+    border-left: 0 solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 65px;
+}
+.trapezoid-right {
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    border-bottom: 50px solid $white;
+    border-left: 25px solid transparent;
+    border-right: 0 solid transparent;
+    height: 0;
+    width: 65px;
+}
+.oval {
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    width: 200px;
+    height: 100px;
+    background: $white;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 100px / 50px;
+}
+.triangle-down {
+    height: 45px;
+    overflow: hidden;
+    width: 100px;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    &:after {
+        background: none repeat scroll 0 0 $white;
+        content: "";
+        height: 50px;
+        left: 25px;
+        position: absolute;
+        top: -25px;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        width: 50px;
+    }
+}
+.triangle-up {
+    height: 45px;
+    overflow: hidden;
+    width: 100px;
+    &:after {
+        background: none repeat scroll 0 0 $white;
+        content: "";
+        height: 50px;
+        left: 25px;
+        position: absolute;
+        top: 20px;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        width: 50px;
+    }
+}
+.triangle-left {
+    height: 71px;
+    overflow: hidden;
+    width: 40px;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 5px 0 $mine_shaft_95;
+    span {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        top: 40%;
+    }
+    &:after {
+        background: none repeat scroll 0 0 $white;
+        content: "";
+        height: 50px;
+        left: -25px;
+        position: absolute;
+        top: 10px;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        width: 50px;
+    }
+}
+.triangle-right {
+    height: 71px;
+    overflow: hidden;
+    width: 40px;
+    span {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        top: 40%;
+    }
+    &:after {
+        background: none repeat scroll 0 0 $white;
+        content: "";
+        height: 50px;
+        left: 15px;
+        position: absolute;
+        top: 10px;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        width: 50px;
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 5px 0 $mine_shaft_95;
+    }
+}
+.bubble {
+    background: none repeat scroll 0 0 $white;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 0;
+    height: 55px;
+    width: 90px;
+    &:before {
+        border-bottom: 8px solid transparent;
+        border-right: 17px solid $white;
+        border-top: 8px solid transparent;
+        content: "";
+        height: 0;
+        margin: 6px 0 0 -17px;
+        position: absolute;
+        width: 0;
+    }
+}
+.arrow-tip-small {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 -20px;
+    background: $white;
+}
+.process-small {
+    background-color: $white;
+    height: 34px;
+    padding: 0.5em;
+    width: 75px;
+    span {
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+    }
+}
+.decision-small {
+    height: 60px;
+    overflow: hidden;
+    margin: 20px!important;
+    width: 60px;
+    background: none repeat scroll 0 0 $white;
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(45deg);
+}
+.circle-small {
+    background: none repeat scroll 0 0 $white;
+    border: 1.5em solid transparent;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 2.5em;
+    height: 20px;
+    line-height: 0;
+    left: 10px;
+    width: 20px;
+    span {
+        left: -10px;
+        position: absolute;
+        text-align: center;
+        top: 40%;
+        width: 100%;
+    }
+}
+.parallelogram-small {
+    background-color: $white;
+    height: 50px;
+    width: 90px;
+    left: 10px;
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: skew(20deg);
+    span {
+        position: absolute;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: skew(-20deg);
+        width: 100%;
+        text-align: center;
+    }
+}
+.parallelogramRight-small {
+    background-color: $white;
+    height: 50px;
+    width: 90px;
+    left: 10px;
+    //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: skew(-20deg);
+    span {
+        position: absolute;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: skew(20deg);
+        width: 100%;
+        left: 10px;
+        text-align: center;
+    }
+}
+.trapezoid-up-small {
+    border-bottom: 50px solid $white;
+    border-left: 22px solid $black;
+    border-right: 22px solid $black;
+    height: 0;
+    width: 65px;
+}
+.trapezoid-down-small {
+    height: 35px;
+    overflow: hidden;
+    width: 100px;
+}
+.trapezoid-left-small {
+    border-bottom: 50px solid $white;
+    border-left: 0 solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 65px;
+}
+.trapezoid-right-small {
+    border-bottom: 50px solid $white;
+    border-left: 25px solid transparent;
+    border-right: 0 solid transparent;
+    height: 0;
+    width: 65px;
+}
+.oval-small {
+    width: 200px;
+    height: 100px;
+    background: $white;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 100px / 50px;
+}
+.triangle-down-small {
+    height: 45px;
+    overflow: hidden;
+    width: 100px;
+    &:after {
+        background: none repeat scroll 0 0 $white;
+        content: "";
+        height: 50px;
+        left: 25px;
+        position: absolute;
+        top: -25px;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        width: 50px;
+    }
+}
+.triangle-up-small {
+    height: 45px;
+    overflow: hidden;
+    width: 100px;
+    &:after {
+        background: none repeat scroll 0 0 $white;
+        content: "";
+        height: 50px;
+        left: 25px;
+        position: absolute;
+        top: 20px;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        width: 50px;
+    }
+}
+.triangle-left-small {
+    height: 71px;
+    overflow: hidden;
+    width: 40px;
+    &:after {
+        background: none repeat scroll 0 0 $white;
+        content: "";
+        height: 50px;
+        left: -25px;
+        position: absolute;
+        top: 10px;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        width: 50px;
+    }
+}
+.triangle-right-small {
+    height: 71px;
+    overflow: hidden;
+    width: 40px;
+    &:after {
+        background: none repeat scroll 0 0 $white;
+        content: "";
+        height: 50px;
+        left: 15px;
+        position: absolute;
+        top: 10px;
+        //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(45deg);
+        width: 50px;
+    }
+}
+.bubble-small {
+    background: none repeat scroll 0 0 $white;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 0;
+    height: 55px;
+    width: 90px;
+    &:before {
+        border-bottom: 8px solid transparent;
+        border-right: 17px solid $white;
+        border-top: 8px solid transparent;
+        content: "";
+        height: 0;
+        margin: 6px 0 0 -17px;
+        position: absolute;
+        width: 0;
+    }
+}

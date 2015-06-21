@@ -4,7 +4,7 @@
     %meta{ charset: 'utf-8' }
     %meta{ content: 'width=device-width, initial-scale=0.7, maximum-scale=1.0, minimum-scale=0.7, user-scalable=yes', name: 'viewport' }
     %meta{ content: 'IE=Edge,chrome=1', 'http-equiv' => 'X-UA-Compatible' }
-    %title 'WF/Designer'
+    %title WF/Designer
     %link{ href: '/favicon.ico', rel: 'shortcut icon' }
     = stylesheet_link_tag :wf_main # , :media => 'all'
     = javascript_include_tag :app
@@ -16,5 +16,5 @@
   %body
     = render 'layout/wf_popup'
     = render 'layout/wf_panel'
-
+    = render 'layout/board'
     = yield

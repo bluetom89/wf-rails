@@ -1,32 +1,23 @@
-@import 'wf_fonts';
-@import 'wf_shapes';
-@import 'wf_popup';
-@import 'wf_helpers';
-@import 'wf_panel';
-//colors
-$white: white;
-$whitesmoke: whitesmoke;
-$black_50: rgba(0, 0, 0, 0.5);
-$color_pickled_bluewood_approx: #2c3e50;
-$color_pale_sky_approx: #617487;
-$black: #000000;
-$color_woodsmoke_approx: #111111;
-$mine_shaft_95: rgba(50, 50, 50, 0.95);
-$gray: gray;
-$web_orange:  orange;
+/*
+ * = require 'vendor/jquery-ui'
+ * = require 'vendor/colorpicker'
+ */
 
-//fonts
-$font_0: source_sans_regular;
-$font_1: source_sans_semibold;
+@import 'wf_fonts';
+@import 'wf_colors';
+@import 'wf_shapes';
+@import 'wf_helpers';
+@import 'wf_popup';
+@import 'wf_panel';
 
 //urls
-$url_0: url(../img/bg.png);
+$bg: url('bg.png');
 
 //@extend-elements
 //original selectors
 //#board .aLabel._jsPlumb_hover, #board ._jsPlumb_source_hover, #board ._jsPlumb_target_hover
 %extend_1 {
-    font-family: $font_1;
+    font-family: $sans_regular;
     //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
     box-shadow: 0 0 17px 0 $mine_shaft_95;
     //Instead of the line below you could use @includeuser-select($select)
@@ -38,10 +29,10 @@ body {
     position: static;
     margin: 0;
     padding: 0;
-    color: $whitesmoke;
+    color: white;
     z-index: 0;
     min-width: 1000px;
-    font-family: $font_0;
+    font-family: $sans_regular;
     overflow-x: hidden;
     overflow-y: scroll;
     width: 100%;
@@ -120,7 +111,7 @@ body {
 #board {
     overflow-y: hidden;
     overflow-x: hidden;
-    background: $url_0 repeat;
+    background: $bg repeat;
     color: $black;
     display: block;
     left: 20%;
@@ -134,7 +125,7 @@ body {
         position: absolute;
         display: inline-block;
         color: $color_woodsmoke_approx;
-        font-family: $font_1;
+        font-family: $sans_regular;
         //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
         transition: box-shadow 0.25s ease-in;
         &:hover {
@@ -145,7 +136,7 @@ body {
         }
         .variables {
             color: $gray;
-            font-family: $font_0;
+            font-family: $sans_regular;
             font-size: 10px;
             left: 5px;
             position: absolute;
