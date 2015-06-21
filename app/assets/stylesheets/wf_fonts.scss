@@ -1,0 +1,36 @@
+//fonts
+$sans_bold: source_sans_bold;
+$sans_bold_italic: source_sans_bold_italic;
+$sans_regular: source_sans_regular;
+$sans_semibold: source_sans_semibold;
+
+//urls
+$url_0: url(fonts/SourceSansPro-Black.ttf);
+$url_1: url(fonts/SourceSansPro-BlackItalic.ttf);
+$url_2: url(fonts/SourceSansPro-Regular.otf);
+$url_3: url(fonts/SourceSansPro-Semibold.otf);
+
+@font-face {
+    font-family: $sans_bold;
+    src: $url_0;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: $sans_bold_italic;
+    src: $url_1;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: $sans_regular;
+    src: $url_2;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: $sans_semibold;
+    src: $url_3;
+    font-weight: normal;
+    font-style: normal;
+}

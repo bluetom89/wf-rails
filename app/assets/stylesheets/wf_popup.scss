@@ -1,0 +1,171 @@
+#pop_up {
+    hr {
+        width: 100%;
+        clear: both;
+        display: block;
+        margin: 10px 0;
+        color: $black;
+    }
+    label {
+        line-height: 28px;
+        width: 30%;
+        text-align: right;
+        float: left;
+    }
+    select {
+        line-height: 28px;
+        float: left;
+        width: 50%;
+        text-align: left;
+        padding: 5px;
+    }
+    input {
+        float: left;
+        width: 50%;
+        text-align: left;
+        padding: 5px;
+    }
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+    textarea {
+        display: block;
+        float: left;
+        width: 50%;
+        text-align: left;
+        resize: none;
+        height: 100px;
+        padding: 5px;
+    }
+    .ui-button {
+        margin-left: 10px;
+        margin-top: 5px;
+        padding: 0 15px;
+    }
+    #edit {
+        background: none repeat scroll 0 0 $white;
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 12px -1px $mine_shaft_60 inset;
+        color: $black;
+        display: block;
+        height: auto;
+        margin: 100px auto;
+        padding: 10px 20px 40px;
+        position: relative;
+        width: 500px;
+        z-index: 1100;
+    }
+    #conn {
+        background: none repeat scroll 0 0 $white;
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 12px -1px $mine_shaft_60 inset;
+        color: $black;
+        display: block;
+        height: auto;
+        margin: 100px auto;
+        padding: 10px 20px 40px;
+        position: relative;
+        width: 500px;
+        z-index: 1100;
+        #curviness {
+            border: 1px solid $color_lola_approx;
+            display: block;
+            float: left;
+            height: 14px;
+            line-height: 28px;
+            margin: 5px 0 0 45px;
+            padding: 4px 8px 0;
+            width: 187px;
+            #amount {
+                float: left;
+                margin: -8px 0 0 -44px;
+                font-weight: bold;
+                color: $color_pickled_bluewood_approx;
+            }
+        }
+        #curviness_value {
+            position: relative;
+            line-height: 28px;
+        }
+        .settings {
+            margin-bottom: 10px;
+        }
+    }
+    #fields {
+        width: 500px;
+        height: auto;
+        input {
+        }
+        span {
+            display: inline-block;
+            overflow: visible;
+            input {
+                width: 10px;
+            }
+            label {
+                text-align: left;
+                width: 130px;
+            }
+        }
+    }
+    #add_fields {
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    #add_field_btn {
+        cursor: pointer;
+        height: 16px;
+        left: 330px;
+        margin-top: -1px;
+        position: absolute;
+        width: 16px;
+    }
+    #colorpicker {
+        position: relative;
+        width: 200px;
+        height: 100px;
+        display: block;
+    }
+    #loader {
+        background: none repeat scroll 0 0 $white;
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 12px -1px $mine_shaft_60 inset;
+        color: $black;
+        display: block;
+        height: auto;
+        margin: 100px auto;
+        padding: 10px 20px 40px;
+        position: relative;
+        width: 500px;
+        z-index: 1100;
+        #load_list {
+            li {
+                cursor: pointer;
+                padding: 5px 10px;
+                width: 85%;
+                color: $black;
+            }
+            .ui-selecting {
+                background: $color_bright_sun_approx;
+            }
+            .ui-selected {
+                background: $color_tree_poppy_approx;
+                color: $white;
+            }
+        }
+    }
+    #export {
+        background: none repeat scroll 0 0 $white;
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 12px -1px $mine_shaft_60 inset;
+        color: $black;
+        display: block;
+        height: auto;
+        margin: 100px auto;
+        padding: 10px 20px 40px;
+        position: relative;
+        width: 500px;
+        z-index: 1100;
+    }
+}

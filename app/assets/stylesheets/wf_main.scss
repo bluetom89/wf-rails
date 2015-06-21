@@ -1,0 +1,201 @@
+/*
+ * = require 'vendor/jquery-ui'
+ * = require 'vendor/colorpicker'
+ */
+
+@import 'wf_fonts';
+@import 'wf_colors';
+@import 'wf_shapes';
+@import 'wf_helpers';
+@import 'wf_popup';
+@import 'wf_panel';
+
+//urls
+$bg: url('bg.png');
+
+//@extend-elements
+//original selectors
+//#board .aLabel._jsPlumb_hover, #board ._jsPlumb_source_hover, #board ._jsPlumb_target_hover
+%extend_1 {
+    font-family: $sans_regular;
+    //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 17px 0 $mine_shaft_95;
+    //Instead of the line below you could use @includeuser-select($select)
+    user-select: none;
+}
+
+
+body {
+    position: static;
+    margin: 0;
+    padding: 0;
+    color: white;
+    z-index: 0;
+    min-width: 1000px;
+    font-family: $sans_regular;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    //Instead of the line below you could use @includeuser-select($select)
+    user-select: none;
+}
+#pop_up {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $black_50;
+    z-index: 1000;
+}
+#header {
+    background: none repeat scroll 0 0 $color_pickled_bluewood_approx;
+    //Instead of the line below you could use @includeborder-bottom-right-radius($radius)
+    border-bottom-right-radius: 45%;
+    height: 35px;
+    overflow: visible;
+    position: fixed;
+    top: 0;
+    width: 25%;
+    min-width: 400px;
+    z-index: 100;
+}
+#main_btn {
+    background: none repeat scroll 0 0 $color_pickled_bluewood_approx;
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    display: block;
+    height: 35px;
+    left: 0;
+    padding-top: 0;
+    position: absolute;
+    top: 0;
+    width: 250px;
+    z-index: 10;
+    div {
+        margin-left: 10px;
+        margin-top: 5px;
+        padding: 0 15px;
+    }
+}
+#left_panel {
+    background: none repeat scroll 0 0 $color_pale_sky_approx;
+    border-left: 1px solid $color_pickled_bluewood_approx;
+    border-right: 1px solid $color_pickled_bluewood_approx;
+    height: 100%;
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 10%;
+    min-width: 150px;
+    z-index: 1;
+}
+#left_panel_btn {
+    background-color: $color_pale_sky_approx;
+    //Instead of the line below you could use @includeborder-top-right-radius($radius)
+    border-top-right-radius: 4px;
+    //Instead of the line below you could use @includeborder-bottom-right-radius($radius)
+    border-bottom-right-radius: 4px;
+    border-bottom: 1px solid $color_pickled_bluewood_approx;
+    border-right: 1px solid $color_pickled_bluewood_approx;
+    border-top: 1px solid $color_pickled_bluewood_approx;
+    display: none;
+    height: 19px;
+    left: 20%;
+    padding: 5px;
+    position: fixed;
+    top: 65px;
+    width: 19px;
+    z-index: 100;
+}
+#board {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: $bg repeat;
+    color: $black;
+    display: block;
+    left: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5000px;
+    z-index: 0;
+    .item {
+        position: absolute;
+        display: inline-block;
+        color: $color_woodsmoke_approx;
+        font-family: $sans_regular;
+        //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: box-shadow 0.25s ease-in;
+        &:hover {
+            font-weight: bold;
+            cursor: move;
+            //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: 0 0 17px 0 $mine_shaft_95;
+        }
+        .variables {
+            color: $gray;
+            font-family: $sans_regular;
+            font-size: 10px;
+            left: 5px;
+            position: absolute;
+            top: 0;
+            h4 {
+                float: left;
+                width: 70%;
+                text-align: left;
+                margin: 0;
+            }
+        }
+    }
+    .aLabel {
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 5px 0 $mine_shaft_95;
+        background-color: $white;
+        opacity: 1;
+        padding: 5px 10px;
+        border: 1px solid $color_pickled_bluewood_approx;
+        cursor: pointer;
+        z-index: 100;
+        //Instead of the line below you could use @includeuser-select($select)
+        user-select: none;
+        &._jsPlumb_hover {
+            @extend %extend_1;
+        }
+    }
+    ._jsPlumb_source_hover {
+        @extend %extend_1;
+    }
+    ._jsPlumb_target_hover {
+        @extend %extend_1;
+    }
+    .ep {
+        position: absolute;
+        bottom: 37%;
+        right: 5px;
+        width: 1em;
+        height: 1em;
+        background-color: $color_pickled_bluewood_approx;
+        cursor: pointer;
+        //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 2px $black;
+        //Instead of the line below you could use @includetransition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: all 0.25s ease-in;
+        &:hover {
+            //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: 0 0 6px $black;
+            //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: scale(1.3);
+        }
+    }
+    .dragHover {
+        border: 2px solid $web_orange;
+    }
+    path {
+        cursor: pointer;
+    }
+}
+.board ._jsPlumb_endpoint {
+    z-index: 3;
+}
