@@ -1,40 +1,72 @@
 //colors
-$white: white;
-$whitesmoke: whitesmoke;
+$black:  black;
 $black_50: rgba(0, 0, 0, 0.5);
-$color_pickled_bluewood_approx: #2c3e50;
+$color_bright_sun_approx: #feca40;
+$color_lola_approx: #d8d0db;
 $color_pale_sky_approx: #617487;
-$black: #000000;
+$color_pickled_bluewood_approx: #2c3e50;
+$color_tree_poppy_approx: #f39814;
 $color_woodsmoke_approx: #111111;
-$mine_shaft_95: rgba(50, 50, 50, 0.95);
 $gray: gray;
-$web_orange:  orange;
-
-//colors
-$black: black;
-$white: #ffffff;
 $mine_shaft_60: rgba(50, 50, 50, 0.6);
-$color_lola_approx: #d8d0db;
-$color_pickled_bluewood_approx: #2c3e50;
-$color_bright_sun_approx: #feca40;
-$color_tree_poppy_approx: #f39814;
-
-//colors
-$white: #ffffff;
-$black:  black;
 $mine_shaft_95: rgba(50, 50, 50, 0.95);
-
-//colors
-$black: black;
-$white: #ffffff;
-$mine_shaft_60: rgba(50, 50, 50, 0.6);
-$color_lola_approx: #d8d0db;
-$color_pickled_bluewood_approx: #2c3e50;
-$color_bright_sun_approx: #feca40;
-$color_tree_poppy_approx: #f39814;
-
-//colors
-$color_pickled_bluewood_approx: #2c3e50;
-$black:  black;
-$color_bright_sun_approx: #feca40;
+$web_orange:  orange;
 $white: white;
+
+//CSS3 Animation  Delay and Duration with vendor-prefixes
+@mixin animate-props ($delay: 1s, $duration: 1s, $mode: both) {
+    -webkit-animation-delay    : $delay;
+    -webkit-animation-duration : $duration;
+    -webkit-animation-fill-mode: $mode;
+
+    -ms-animation-delay        : $delay;
+    -ms-animation-duration     : $duration;
+    -ms-animation-fill-mode    : $mode;
+
+    -moz-animation-delay       : $delay;
+    -moz-animation-duration    : $duration;
+    -moz-animation-fill-mode   : $mode;
+
+    -o-animation-delay         : $delay;
+    -o-animation-duration      : $duration;
+    -o-animation-fill-mode     : $mode;
+
+    animation-delay            : $delay;
+    animation-duration         : $duration;
+    animation-fill-mode        : $mode;
+}
+
+//CSS3 Animation name only with vendor-prefixes
+@mixin animate-type($animation-name){
+  -webkit-animation-name: $animation-name;
+  -moz-animation-name   : $animation-name;
+  -o-animation-name     : $animation-name;
+  animation-name        : $animation-name;
+}
+
+//CSS3 Generate keyframes with vendor prefixes and contents
+@mixin animate-sprite($animation-name) {
+    @-webkit-keyframes $animation-name {
+        @content;
+    }
+    @-moz-keyframes $animation-name {
+        @content;
+    }
+    @-o-keyframes $animation-name {
+        @content;
+    }
+    @keyframes $animation-name {
+        @content;
+    }
+}
+
+//CSS3 Transform mixins transform: rotate, scale, skew, translate
+@mixin transform-rotate($val){
+    @if($val != null){
+        -webkit-transform: rotate($val + deg) ;
+        -moz-transform   : rotate($val + deg) ;
+        -o-transform     : rotate($val + deg) ;
+        -ms-transform    : rotate($val + deg) ;
+        transform        : rotate($val + deg) ;
+    }
+}

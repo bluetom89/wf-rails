@@ -1,0 +1,27 @@
+#conn
+  %h1 Connection properties
+  %p This is the basic connection edit form. You can only change displayed label and connection color.
+  %hr/
+  %label Label:
+  %input#name{:name => "", :type => "text", :value => ""}/
+  %br/
+  %label Show label:
+  %input#show_label{:name => "fields_in_body", :type => "checkbox", :value => ""}/
+  %br/
+  %hr/
+  %br/
+  %label Background color:
+  %input#bg{:name => "", :type => "text", :value => ""}/
+  %br/
+  %br/
+  %label Source ID:
+  %input#source{:disabled => "disabled", :name => "", :type => "text", :value => ""}/
+  %br/
+  %label Target ID:
+  %input#target{:disabled => "disabled", :name => "", :type => "text", :value => ""}/
+  %br/
+  %br/
+  %hr/
+  %span#submit.float_r.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{:role => "button"} Save
+  %span#del.float_r.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{:role => "button"} Delete
+  %span#close.float_l.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{:role => "button"} Cancel

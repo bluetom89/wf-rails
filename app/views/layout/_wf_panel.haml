@@ -1,37 +1,46 @@
-#left_panel_btn.show{:role => "button"}
-  %span.ui-icon.ui-icon-arrowthick-1-w
-#left_panel
-  #project_details
-    %p.margt100.margl20{:style => "position: absolute;"}
-      Total items count:
+#project
+
+  #save_board.ui-button.ui-state-default.ui-corner-all.ui-button-text-only{:role => "button"} Save
+  #load_board.ui-button.ui-state-default.ui-corner-all.ui-button-text-only{:role => "button"} Load
+  #clear_board.ui-button.ui-state-default.ui-corner-all.ui-button-text-only{:role => "button"} New
+
+  #endpoints_btn.ui-button.ui-state-default.show{:role => "button"}
+    %span.float_l.ui-icon.ui-icon-flag
+    Endpoints
+    %span.status.dot.float_r.bgGreen |
+  #resizing_btn.ui-button.ui-state-default.show{:role => "button"}
+    %span.float_l.ui-icon.ui-icon-arrow-2-ne-sw
+    Resizing
+    %span.status.dot.float_r.bgGreen |
+  #dragging_btn.ui-button.ui-state-default.show{:role => "button"}
+    %span.float_l.ui-icon.ui-icon-arrow-4-diag
+    Dragging
+    %span.status.dot.float_r.bgGreen |
+
+#panel
+
+  #title
+    .logo
+    %h1 Workflow Designer
+  .clear
+  #details
+    %p
+      Total items:
       %span#total_item_number 0
-    #options_btn
-      #endpoints_btn.ui-button.ui-state-default.show{:role => "button"}
-        %span.float_l.ui-icon.ui-icon-flag
-        Endpoints
-        %span.status.dot.float_r.bgGreen |
-      #resizing_btn.ui-button.ui-state-default.show{:role => "button"}
-        %span.float_l.ui-icon.ui-icon-arrow-2-ne-sw
-        Resizing
-        %span.status.dot.float_r.bgGreen |
-      #dragging_btn.ui-button.ui-state-default.show{:role => "button"}
-        %span.float_l.ui-icon.ui-icon-arrow-4-diag
-        Dragging
-        %span.status.dot.float_r.bgGreen |
-  %hr.clear/
+    %p
+      Total connections:
+      %span#total_conn_number 0
+  %hr.clear
+
   #add_item
-    %h3
-      Items Set
-      %span.float_r.ui-icon.ui-icon-document-b
-    .margl20
-      .items_set
-        .item.process-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "process"}
-        .item.decision-small.marginl20{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "decision"}
-        .item.parallelogram-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "parallelogram"}
-        .item.parallelogramRight-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "parallelogramRight"}
-        / .item.triangle-up-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "triangle-up"}
-        / .item.triangle-up-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "triangle-left"}
-        / .item.triangle-up-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "triangle-right"}
-        / .item.triangle-up-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "triangle-down"}
-        / .item.bubble-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "bubble"}
-        .item.circle-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "circle"}
+    .items_set
+      .item.process-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "process"}
+      .item.decision-small.marginl20{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "decision"}
+      .item.parallelogram-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "parallelogram"}
+      .item.parallelogramRight-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "parallelogramRight"}
+      / .item.triangle-up-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "triangle-up"}
+      / .item.triangle-up-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "triangle-left"}
+      / .item.triangle-up-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "triangle-right"}
+      / .item.triangle-up-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "triangle-down"}
+      / .item.bubble-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "bubble"}
+      .item.circle-small{"data-fields" => "", "data-id" => "0", "data-label" => "", "data-shape" => "circle"}

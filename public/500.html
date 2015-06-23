@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>500 Internal Server Error</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- parallax.js (no jquery shit included) -->
+	<script type="text/javascript">!function(t,i,e){"use strict";function s(t,i){this.element=t,this.layers=t.getElementsByClassName("layer");var e={calibrateX:this.data(this.element,"calibrate-x"),calibrateY:this.data(this.element,"calibrate-y"),invertX:this.data(this.element,"invert-x"),invertY:this.data(this.element,"invert-y"),limitX:this.data(this.element,"limit-x"),limitY:this.data(this.element,"limit-y"),scalarX:this.data(this.element,"scalar-x"),scalarY:this.data(this.element,"scalar-y"),frictionX:this.data(this.element,"friction-x"),frictionY:this.data(this.element,"friction-y"),originX:this.data(this.element,"origin-x"),originY:this.data(this.element,"origin-y")};for(var s in e)null===e[s]&&delete e[s];this.extend(this,r,i,e),this.calibrationTimer=null,this.calibrationFlag=!0,this.enabled=!1,this.depths=[],this.raf=null,this.bounds=null,this.ex=0,this.ey=0,this.ew=0,this.eh=0,this.ecx=0,this.ecy=0,this.erx=0,this.ery=0,this.cx=0,this.cy=0,this.ix=0,this.iy=0,this.mx=0,this.my=0,this.vx=0,this.vy=0,this.onMouseMove=this.onMouseMove.bind(this),this.onDeviceOrientation=this.onDeviceOrientation.bind(this),this.onOrientationTimer=this.onOrientationTimer.bind(this),this.onCalibrationTimer=this.onCalibrationTimer.bind(this),this.onAnimationFrame=this.onAnimationFrame.bind(this),this.onWindowResize=this.onWindowResize.bind(this),this.initialise()}var n="Parallax",o=30,r={relativeInput:!1,clipRelativeInput:!1,calibrationThreshold:100,calibrationDelay:500,supportDelay:500,calibrateX:!1,calibrateY:!0,invertX:!0,invertY:!0,limitX:!1,limitY:!1,scalarX:10,scalarY:10,frictionX:.1,frictionY:.1,originX:.5,originY:.5};s.prototype.extend=function(){if(arguments.length>1)for(var t=arguments[0],i=1,e=arguments.length;e>i;i++){var s=arguments[i];for(var n in s)t[n]=s[n]}},s.prototype.data=function(t,i){return this.deserialize(t.getAttribute("data-"+i))},s.prototype.deserialize=function(t){return"true"===t?!0:"false"===t?!1:"null"===t?null:!isNaN(parseFloat(t))&&isFinite(t)?parseFloat(t):t},s.prototype.camelCase=function(t){return t.replace(/-+(.)?/g,function(t,i){return i?i.toUpperCase():""})},s.prototype.transformSupport=function(s){for(var n=i.createElement("div"),o=!1,r=null,a=!1,h=null,l=null,p=0,c=this.vendors.length;c>p;p++)if(null!==this.vendors[p]?(h=this.vendors[p][0]+"transform",l=this.vendors[p][1]+"Transform"):(h="transform",l="transform"),n.style[l]!==e){o=!0;break}switch(s){case"2D":a=o;break;case"3D":if(o){var m=i.body||i.createElement("body"),u=i.documentElement,y=u.style.overflow;i.body||(u.style.overflow="hidden",u.appendChild(m),m.style.overflow="hidden",m.style.background=""),m.appendChild(n),n.style[l]="translate3d(1px,1px,1px)",r=t.getComputedStyle(n).getPropertyValue(h),a=r!==e&&r.length>0&&"none"!==r,u.style.overflow=y,m.removeChild(n)}}return a},s.prototype.ww=null,s.prototype.wh=null,s.prototype.wcx=null,s.prototype.wcy=null,s.prototype.wrx=null,s.prototype.wry=null,s.prototype.portrait=null,s.prototype.desktop=!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i),s.prototype.vendors=[null,["-webkit-","webkit"],["-moz-","Moz"],["-o-","O"],["-ms-","ms"]],s.prototype.motionSupport=!!t.DeviceMotionEvent,s.prototype.orientationSupport=!!t.DeviceOrientationEvent,s.prototype.orientationStatus=0,s.prototype.transform2DSupport=s.prototype.transformSupport("2D"),s.prototype.transform3DSupport=s.prototype.transformSupport("3D"),s.prototype.propertyCache={},s.prototype.initialise=function(){this.transform3DSupport&&this.accelerate(this.element);var i=t.getComputedStyle(this.element);"static"===i.getPropertyValue("position")&&(this.element.style.position="relative"),this.updateLayers(),this.updateDimensions(),this.enable(),this.queueCalibration(this.calibrationDelay)},s.prototype.updateLayers=function(){this.layers=this.element.getElementsByClassName("layer"),this.depths=[];for(var t=0,i=this.layers.length;i>t;t++){var e=this.layers[t];this.transform3DSupport&&this.accelerate(e),e.style.position=t?"absolute":"relative",e.style.display="block",e.style.left=0,e.style.top=0,this.depths.push(this.data(e,"depth")||0)}},s.prototype.updateDimensions=function(){this.ww=t.innerWidth,this.wh=t.innerHeight,this.wcx=this.ww*this.originX,this.wcy=this.wh*this.originY,this.wrx=Math.max(this.wcx,this.ww-this.wcx),this.wry=Math.max(this.wcy,this.wh-this.wcy)},s.prototype.updateBounds=function(){this.bounds=this.element.getBoundingClientRect(),this.ex=this.bounds.left,this.ey=this.bounds.top,this.ew=this.bounds.width,this.eh=this.bounds.height,this.ecx=this.ew*this.originX,this.ecy=this.eh*this.originY,this.erx=Math.max(this.ecx,this.ew-this.ecx),this.ery=Math.max(this.ecy,this.eh-this.ecy)},s.prototype.queueCalibration=function(t){clearTimeout(this.calibrationTimer),this.calibrationTimer=setTimeout(this.onCalibrationTimer,t)},s.prototype.enable=function(){this.enabled||(this.enabled=!0,this.orientationSupport?(this.portrait=null,t.addEventListener("deviceorientation",this.onDeviceOrientation),setTimeout(this.onOrientationTimer,this.supportDelay)):(this.cx=0,this.cy=0,this.portrait=!1,t.addEventListener("mousemove",this.onMouseMove)),t.addEventListener("resize",this.onWindowResize),this.raf=requestAnimationFrame(this.onAnimationFrame))},s.prototype.disable=function(){this.enabled&&(this.enabled=!1,this.orientationSupport?t.removeEventListener("deviceorientation",this.onDeviceOrientation):t.removeEventListener("mousemove",this.onMouseMove),t.removeEventListener("resize",this.onWindowResize),cancelAnimationFrame(this.raf))},s.prototype.calibrate=function(t,i){this.calibrateX=t===e?this.calibrateX:t,this.calibrateY=i===e?this.calibrateY:i},s.prototype.invert=function(t,i){this.invertX=t===e?this.invertX:t,this.invertY=i===e?this.invertY:i},s.prototype.friction=function(t,i){this.frictionX=t===e?this.frictionX:t,this.frictionY=i===e?this.frictionY:i},s.prototype.scalar=function(t,i){this.scalarX=t===e?this.scalarX:t,this.scalarY=i===e?this.scalarY:i},s.prototype.limit=function(t,i){this.limitX=t===e?this.limitX:t,this.limitY=i===e?this.limitY:i},s.prototype.origin=function(t,i){this.originX=t===e?this.originX:t,this.originY=i===e?this.originY:i},s.prototype.clamp=function(t,i,e){return t=Math.max(t,i),t=Math.min(t,e)},s.prototype.css=function(t,i,s){var n=this.propertyCache[i];if(!n)for(var o=0,r=this.vendors.length;r>o;o++)if(n=null!==this.vendors[o]?this.camelCase(this.vendors[o][1]+"-"+i):i,t.style[n]!==e){this.propertyCache[i]=n;break}t.style[n]=s},s.prototype.accelerate=function(t){this.css(t,"transform","translate3d(0,0,0)"),this.css(t,"transform-style","preserve-3d"),this.css(t,"backface-visibility","hidden")},s.prototype.setPosition=function(t,i,e){i+="px",e+="px",this.transform3DSupport?this.css(t,"transform","translate3d("+i+","+e+",0)"):this.transform2DSupport?this.css(t,"transform","translate("+i+","+e+")"):(t.style.left=i,t.style.top=e)},s.prototype.onOrientationTimer=function(){this.orientationSupport&&0===this.orientationStatus&&(this.disable(),this.orientationSupport=!1,this.enable())},s.prototype.onCalibrationTimer=function(){this.calibrationFlag=!0},s.prototype.onWindowResize=function(){this.updateDimensions()},s.prototype.onAnimationFrame=function(){this.updateBounds();var t=this.ix-this.cx,i=this.iy-this.cy;(Math.abs(t)>this.calibrationThreshold||Math.abs(i)>this.calibrationThreshold)&&this.queueCalibration(0),this.portrait?(this.mx=this.calibrateX?i:this.iy,this.my=this.calibrateY?t:this.ix):(this.mx=this.calibrateX?t:this.ix,this.my=this.calibrateY?i:this.iy),this.mx*=this.ew*(this.scalarX/100),this.my*=this.eh*(this.scalarY/100),isNaN(parseFloat(this.limitX))||(this.mx=this.clamp(this.mx,-this.limitX,this.limitX)),isNaN(parseFloat(this.limitY))||(this.my=this.clamp(this.my,-this.limitY,this.limitY)),this.vx+=(this.mx-this.vx)*this.frictionX,this.vy+=(this.my-this.vy)*this.frictionY;for(var e=0,s=this.layers.length;s>e;e++){var n=this.layers[e],o=this.depths[e],r=this.vx*o*(this.invertX?-1:1),a=this.vy*o*(this.invertY?-1:1);this.setPosition(n,r,a)}this.raf=requestAnimationFrame(this.onAnimationFrame)},s.prototype.onDeviceOrientation=function(t){if(!this.desktop&&null!==t.beta&&null!==t.gamma){this.orientationStatus=1;var i=(t.beta||0)/o,e=(t.gamma||0)/o,s=this.wh>this.ww;this.portrait!==s&&(this.portrait=s,this.calibrationFlag=!0),this.calibrationFlag&&(this.calibrationFlag=!1,this.cx=i,this.cy=e),this.ix=i,this.iy=e}},s.prototype.onMouseMove=function(t){var i=t.clientX,e=t.clientY;!this.orientationSupport&&this.relativeInput?(this.clipRelativeInput&&(i=Math.max(i,this.ex),i=Math.min(i,this.ex+this.ew),e=Math.max(e,this.ey),e=Math.min(e,this.ey+this.eh)),this.ix=(i-this.ex-this.ecx)/this.erx,this.iy=(e-this.ey-this.ecy)/this.ery):(this.ix=(i-this.wcx)/this.wrx,this.iy=(e-this.wcy)/this.wry)},t[n]=s}(window,document),function(){for(var t=0,i=["ms","moz","webkit","o"],e=0;e<i.length&&!window.requestAnimationFrame;++e)window.requestAnimationFrame=window[i[e]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[i[e]+"CancelAnimationFrame"]||window[i[e]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(i){var e=(new Date).getTime(),s=Math.max(0,16-(e-t)),n=window.setTimeout(function(){i(e+s)},s);return t=e+s,n}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(t){clearTimeout(t)})}();</script>
+	<!-- styles yall -->
+	<style type="text/css">
+    @import url("//hello.myfonts.net/count/2b1fd7");
+
+    @font-face {font-family: 'UrbanGroteskMeBl-Bold';src: url('/assets/webfonts/2B1FD7_1_0.eot');src: url('/assets/webfonts/2B1FD7_1_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/2B1FD7_1_0.woff') format('woff'),url('/assets/webfonts/2B1FD7_1_0.ttf') format('truetype'),url('/assets/webfonts/2B1FD7_1_0.svg#wf') format('svg');}
+    @font-face {font-family: 'UrbanGroteskMeBl-Regular';src: url('/assets/webfonts/2B1FD7_3_0.eot');src: url('/assets/webfonts/2B1FD7_3_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/2B1FD7_3_0.woff') format('woff'),url('/assets/webfonts/2B1FD7_3_0.ttf') format('truetype'),url('/assets/webfonts/2B1FD7_3_0.svg#wf') format('svg');}
+    @font-face {font-family: 'UrbanGroteskReBo-Regular';src: url('/assets/webfonts/2B1FD7_5_0.eot');src: url('/assets/webfonts/2B1FD7_5_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/2B1FD7_5_0.woff') format('woff'),url('/assets/webfonts/2B1FD7_5_0.ttf') format('truetype'),url('/assets/webfonts/2B1FD7_5_0.svg#wf') format('svg');}
+
+    /* the fix ! simply ADD this block BELOW the above block */
+    /*@media screen and (-webkit-min-device-pixel-ratio:0) {
+      @font-face {font-family: 'UrbanGroteskMeBl-Bold'; src: url('/500/2B1FD7_1_0.svg#wf') format('svg'); }
+      @font-face {font-family: 'UrbanGroteskMeBl-Regular'; src: url('/500/2B1FD7_3_0.svg#wf') format('svg'); }
+      @font-face {font-family: 'UrbanGroteskReBo-Regular'; src: url('/500/2B1FD7_5_0.svg#wf') format('svg'); }
+    }*/
+
+    html {
+      font-family: 'UrbanGroteskReBo-Regular', sans-serif;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    .medium {
+      font-family: 'UrbanGroteskMeBl-Regular', sans-serif;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .bold {
+      font-family: 'UrbanGroteskMeBl-Bold', sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 110px;
+    }
+
+    body {
+      text-rendering: optimizeLegibility;
+      line-height: 1.4em;
+      text-align: center;
+      color: white;
+    }
+
+    .center {
+      max-width: 400px;
+      margin: 0 auto;
+      width: 88%;
+    }
+
+    .wrapper {
+      min-height: 460px;
+      position: absolute;
+      overflow: hidden;
+      display: table;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      margin: 0 auto;
+    }
+
+    .scene,
+    .layer {
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .scene {
+      min-height: 460px;
+      position: relative;
+    }
+
+    .title {
+      /*text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);*/
+      margin-top: -0.7em;
+      position: absolute;
+      top: 50%;
+      color: #FF612A;
+      text-align: center;
+      line-height: 1.2em;
+      margin-left: 50%;
+      font-size:70px;
+      left:-125px;
+    }
+
+    .button {
+      font-family: 'UrbanGroteskReBo-Regular', sans-serif;
+      font-style: normal;
+      font-size: 17px;
+      height: 52px;
+      line-height: 24px;
+      padding: 19px 30px 17px 30px;
+      color: #FF612A;
+      border-style: solid;
+      border-width: 1px;
+      position: relative;
+      top:-25px;
+      /*background-color: #ffffff;*/
+    }
+
+    .button:hover {
+      color: #ffffff;
+      background-color: #FF7444;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #FF7444;
+      transition: background 0.25s, border 0.25s;
+    }
+
+    .logo {
+      background-image:url(/assets/500/strike_logo.png);
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      top: -290px;
+      left: 230px;
+    }
+
+    .layer {
+      position: absolute;
+    }
+
+    .layer div {
+      -webkit-transform: translate3d(0,0,0);
+      -moz-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .graphs_points {
+      position: absolute;
+      bottom: 30%;
+      margin-left: 50%;
+      z-index: -2;
+
+    }
+
+    .graphs_points-1 {
+      background-image:url(/assets/500/10.png);
+      background-repeat: no-repeat;
+      width: 903px;
+      height: 92px;
+      position: relative;
+      left: -1100px;
+      top: 50px;
+
+    }
+
+    .graphs_points-2 {
+      background-image:url(/assets/500/11.png);
+      background-repeat: no-repeat;
+      width: 903px;
+      height: 62px;
+      position: relative;
+      top: 80px;
+      left: -300px;
+    }
+
+    .graphs_points-3 {
+      background-image:url(/assets/500/12.png);
+      background-repeat: no-repeat;
+      width: 909px;
+      height: 135px;
+      position: relative;
+      top: 140px;
+      left: -800px;
+    }
+
+    .graphs_points-4 {
+      background-image:url(/assets/500/13.png);
+      background-repeat: no-repeat;
+      width: 939px;
+      height: 189px;
+      position: relative;
+      top: 40px;
+      left: 120px;
+    }
+
+    .graphs_points-5 {
+      background-image:url(/assets/500/15.png);
+      background-repeat: no-repeat;
+      width: 754px;
+      height: 194px;
+      position: relative;
+      top: 60px;
+      left:-1200px;
+    }
+
+    .graphs_points-6 {
+      background-image:url(/assets/500/16.png);
+      background-repeat: no-repeat;
+      width: 600px;
+      height: 88px;
+      position: relative;
+      top: 40px;
+      left: 300px;
+      z-index: -3;
+    }
+
+    .graphs_points-7 {
+      background-image:url(/assets/500/17.png);
+      background-repeat: no-repeat;
+      width: 1229px;
+      height: 110px;
+      position: relative;
+      top: 200px;
+      left: -600px;
+    }
+
+    .graphs {
+      position: absolute;
+      bottom: 80%;
+      z-index:-1;
+      margin-left: 50%;
+    }
+
+    .graph-1 {
+      background-image:url(/assets/500/6.png);
+      background-repeat: no-repeat;
+      width: 1121px;
+      height: 287px;
+      position: relative;
+      left: -1000px;
+      top: 50px;
+    }
+
+    .graph-2 {
+      background-image:url(/assets/500/7.png);
+      background-repeat: no-repeat;
+      width: 642px;
+      height: 164px;
+      position: relative;
+      left:-500px;
+      top: 40px;
+    }
+
+    .graph-3 {
+      background-image:url(/assets/500/8.png);
+      background-repeat: no-repeat;
+      width: 1181px;
+      height: 301px;
+      position: relative;
+      left:-200px;
+      top:-50px;
+      z-index: 1px;
+    }
+
+    .graph-4 {
+      background-image:url(/assets/500_9.png);
+      background-repeat: no-repeat;
+      width: 963px;
+      height: 366px;
+      position: relative;
+      left:400px;
+      top:10px;
+    }
+
+    .graph-5 {
+      background-image:url(/assets/500/18.png);
+      background-repeat: no-repeat;
+      width: 395px;
+      height: 101px;
+      position: relative;
+      left:390px;
+      top:-20px;
+    }
+
+    .pie_chart {
+        position: absolute;
+        bottom: 50%;
+        margin-left: 50%;
+        left: -400px;
+    }
+
+    .pie_chart-1 {
+      background-image:url(/assets/500/1.png);
+      background-repeat: no-repeat;
+      width: 116px;
+      height: 183px;
+      position: relative;
+      top:-10px;
+      left:-20px;
+    }
+
+    .pie_chart-2 {
+      background-image:url(/assets/500/2.png);
+      background-repeat: no-repeat;
+      width: 121px;
+      height: 117px;
+      position: relative;
+      top: -40px;
+      left: 80px;
+    }
+
+    .pie_chart-3 {
+      background-image:url(/assets/500/3.png);
+      background-repeat: no-repeat;
+      width: 116px;
+      height: 70px;
+      position: relative;
+      top: 5px;
+      left: 135px;
+    }
+
+    .pie_chart-4 {
+      background-image:url(/assets/500/4.png);
+      background-repeat: no-repeat;
+      width: 117px;
+      height: 35px;
+      position: relative;
+      top: 80px;
+      left: 150px;
+    }
+
+
+    .pie_chart-5 {
+      background-image:url(/assets/500/5.png);
+      background-repeat: no-repeat;
+      width: 209px;
+      height: 116px;
+      position: relative;
+      top: 110px;
+      left: 30px;
+    }
+
+    .swing-1 {
+      -webkit-animation: swing 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-animation: swing 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      animation: swing 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    .swing-2 {
+      -webkit-animation: swing 3.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-animation: swing 3.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      animation: swing 3.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    .swing-3 {
+      -webkit-animation: swing 3s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-animation: swing 3s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      animation: swing 3s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    .swing-4 {
+      -webkit-animation: swing 2.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-animation: swing 2.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      animation: swing 2.5s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    .swing-5 {
+      -webkit-animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      animation: swing 2s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
+    .hanger {
+      -webkit-transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      position: absolute;
+    }
+    .hanger.position-1 {
+      left: -20px;
+    }
+    .hanger.position-2 {
+      top: 46%;
+    }
+    .hanger.position-3 {
+      top: 59%;
+    }
+    .hanger.position-4 {
+      top: 66.5%;
+    }
+    .hanger.position-5 {
+      top: 69.5%;
+    }
+    .hanger.position-6 {
+      top: 66.5%;
+    }
+    .hanger.position-7 {
+      top: 59%;
+    }
+    .hanger.position-8 {
+      top: 46%;
+    }
+    .hanger.position-9 {
+      top: 28%;
+    }
+    .hanger.position-1 {
+      left: 10%;
+    }
+    .hanger.position-2 {
+      left: 20%;
+    }
+    .hanger.position-3 {
+      left: 30%;
+    }
+    .hanger.position-4 {
+      left: 40%;
+    }
+    .hanger.position-5 {
+      left: 50%;
+    }
+    .hanger.position-6 {
+      left: 60%;
+    }
+    .hanger.position-7 {
+      left: 70%;
+    }
+    .hanger.position-8 {
+      left: 80%;
+    }
+    .hanger.position-9 {
+      left: 90%;
+    }
+
+    ul {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    @-webkit-keyframes swing {
+      0% {
+        -webkit-transform: rotateZ(10deg);
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg); }
+
+      100% {
+        -webkit-transform: rotateZ(-10deg);
+        -moz-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg); } }
+
+    @-moz-keyframes swing {
+      0% {
+        -webkit-transform: rotateZ(10deg);
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg); }
+
+      100% {
+        -webkit-transform: rotateZ(-10deg);
+        -moz-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg); } }
+
+    @-ms-keyframes swing {
+      0% {
+        -webkit-transform: rotateZ(10deg);
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg); }
+
+      100% {
+        -webkit-transform: rotateZ(-10deg);
+        -moz-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg); } }
+
+    @keyframes swing {
+      0% {
+        -webkit-transform: rotateZ(10deg);
+        -moz-transform: rotateZ(10deg);
+        transform: rotateZ(10deg); }
+
+      100% {
+        -webkit-transform: rotateZ(-10deg);
+        -moz-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg); } }
+
+	</style>
+</head>
+<body>
+	<div id="container" class="wrapper">
+		<ul id="scene" class="scene">
+			<div class="pie_chart">
+				<li class="layer" data-depth="0.10"><div class="pie_chart-1 swing-1"></div></li>
+				<li class="layer" data-depth="0.15"><div class="pie_chart-2 swing-2"></div></li>
+				<li class="layer" data-depth="0.20"><div class="pie_chart-3 swing-1"></div></li>
+				<li class="layer" data-depth="0.25"><div class="pie_chart-4 swing-2"></div></li>
+				<li class="layer" data-depth="0.30"><div class="pie_chart-5 swing-1"></div></li>
+			</div>
+			<li class="layer" data-depth="0.45">
+				<div class="title">
+					<span class="medium">OH NO</span></br>
+					<span class="bold">500</span></br>
+					<a class="button" href="https://www.strikesocial.com/">BACK TO MAIN PAGE</a>
+					<div class="logo"></div>
+				</div>
+			</li>
+			<div class="graphs">
+					<li class="layer" data-depth="0.65"><div class="graph-1 swing-1"></div></li>
+					<li class="layer" data-depth="0.70"><div class="graph-2 swing-2"></div></li>
+					<li class="layer" data-depth="0.75"><div class="graph-3 swing-1"></div></li>
+					<li class="layer" data-depth="0.80"><div class="graph-4 swing-4"></div></li>
+					<li class="layer" data-depth="0.85"><div class="graph-5 swing-1"></div></li>
+				</div>
+			<div class="graphs_points">
+				<li class="layer" data-depth="0.55"><div class="graphs_points-1 swing-1"></div></li>
+				<li class="layer" data-depth="0.60"><div class="graphs_points-2 swing-4"></div></li>
+				<li class="layer" data-depth="0.65"><div class="graphs_points-3 swing-2"></div></li>
+				<li class="layer" data-depth="0.70"><div class="graphs_points-4 swing-3"></div></li>
+				<li class="layer" data-depth="0.75"><div class="graphs_points-5 swing-1"></div></li>
+				<li class="layer" data-depth="0.80"><div class="graphs_points-6 swing-2"></div></li>
+				<li class="layer" data-depth="0.90"><div class="graphs_points-7 swing-2"></div></li>
+			</div>
+		</ul>
+	</div>
+	<!-- Scripts -->
+	<script>
+		// Yep, that's it!
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43334538-1', 'strikesocial.com');
+  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

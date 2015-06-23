@@ -1,49 +1,60 @@
+$logo: url('logo.png');
+
 #panel {
-    #project_details {
-        display: block;
-        height: 110px;
-        margin-left: 0;
-        margin-top: 0;
-        position: relative;
-        #options_btn {
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 33px;
-            width: 170px;
-        }
-        #endpoints_btn {
-            display: inline-block;
-            border: 1px solid $color_pickled_bluewood_approx;
-            margin-left: 10px;
-            margin-top: 5px;
-            padding: 0 15px;
-            width: 120px;
-        }
-        #resizing_btn {
-            display: inline-block;
-            margin-left: 10px;
-            border: 1px solid $color_pickled_bluewood_approx;
-            margin-top: 5px;
-            padding: 0 15px;
-            width: 120px;
-        }
-        #dragging_btn {
-            display: inline-block;
-            margin-left: 10px;
-            border: 1px solid $color_pickled_bluewood_approx;
-            margin-top: 5px;
-            padding: 0 15px;
-            width: 120px;
-        }
-        .status {
-        }
-        #workflow_name {
-            float: right;
-            width: 65%;
-            font-size: 14px;
-        }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  bottom: 0;
+  background-color: #555;
+  z-index: 100;
+
+  #title {
+    width: 100%;
+    position: relative;
+    float: left;
+    height: 100px;
+
+    .logo {
+        background: url("logo.png") no-repeat;
+          width: 50px;
+          height: 50px;
+          display: block;
+          position: absolute;
+          margin-top: 37px;
+          left: 16px;
+          z-index: 100;
     }
+
+    h1 {
+        text-align: right;
+        z-index: 101;
+        position: absolute;
+        margin: 16px 16px 0;
+    }
+  }
+
+  #details {
+      position: relative;
+      float: left;
+      width: 100%;
+
+      p {
+        margin: 0 16px 8px;
+      }
+  }
+
+  #options {
+      position: relative;
+      float: left;
+      padding: 16px;
+
+      .ui-button {
+        width: 100%;
+        padding: 4px 0;
+      }
+  }
+
     #add_item {
         margin: 0;
         padding: 0;
@@ -138,6 +149,4 @@
         width: 16px;
     }
 }
-#panel_btn:hover {
-    cursor: pointer;
-}
+

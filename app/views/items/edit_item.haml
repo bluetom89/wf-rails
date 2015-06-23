@@ -1,0 +1,27 @@
+#edit
+  %h1 Edit item properties
+  %hr/
+  %label Name:
+  %input#name{:name => "", :type => "text", :value => ""}/
+  %br/
+  %label Background color:
+  %input#bg{:name => "", :type => "text", :value => ""}/
+  %br/
+  %label Comment:
+  %input#comment{:name => "comment", :value => ""}/
+  %br/
+  %br/
+  %br/
+  %hr/
+  #add_fields
+    #add_field_btn.ui-state-default.ui-icon.ui-icon-arrow-1-s{:role => "button"}
+    %p Select fields that item will contain in this workflow.
+    #fields
+  %hr/
+  %label Show inside item
+  %input#show_fields{:name => "fields_in_body", :type => "checkbox", :value => ""}/
+  %br/
+  %br/
+  %span#submit.float_r.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{:role => "button"} Finish  Save
+  %span#del.float_r.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{:role => "button"} Delete
+  %span#close.float_l.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{:role => "button"} Cancel

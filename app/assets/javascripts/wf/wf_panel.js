@@ -1,8 +1,29 @@
 $( document ).ready(function() {
+
+    $.fn.animateRotate = function(angle, duration, easing, complete) {
+      var args = $.speed(duration, easing, complete);
+      var step = args.step;
+      return this.each(function(i, e) {
+        args.complete = $.proxy(args.complete, e);
+        args.step = function(now) {
+          $.style(e, 'transform', 'rotate(' + now + 'deg)');
+          if (step) return step.apply(e, arguments);
+        };
+
+        $({deg: 0}).animate({deg: angle}, args);
+      });
+    };
+
+    $('#panel #title .logo').animateRotate(360, {
+      duration: 1000,
+      easing: 'linear'
+    })
+
+
     $('#save_board').click(function () {
         var xhr = $.ajax({
                     type: "GET",
-                    url: "boards/save-workflow.html",
+                    url: "popups/save_workflow",
                     cache : false,
                     dataType : 'html',
                     beforeSend: function() { $('#pop_up').show("fast"); },
@@ -30,10 +51,11 @@ $( document ).ready(function() {
                     }
         });
     });
+
     $('#load_board').click(function () {
         var xhr = $.ajax({
                     type: "GET",
-                    url: "boards/load-workflow.html",
+                    url: "popups/load_workflow",
                     cache : false,
                     dataType : 'html',
                     beforeSend: function() { $('#pop_up').show("fast"); },
@@ -66,53 +88,7 @@ $( document ).ready(function() {
         });
     });
 
-    // $('#left_panel_btn').click(function(){
-    //       if($(this).hasClass('show')){
-    //       $( "#left_panel_btn, #left_panel, #board" ).animate({
-    //         left: "-=20%"
-    //         }, 700, function() {
-
-    //            $(this).children().removeClass('ui-icon-arrowthick-1-w').addClass('ui-icon-arrowthick-1-e');
-    //         });
-    //         $( "#board" ).animate({
-
-    //             width: "100%"
-    //         });
-    //         $(this).removeClass('show').addClass('hide');
-    //       }else {
-    //       $( "#left_panel_btn, #left_panel, #board" ).animate({
-    //         left: "+=20%"
-    //         }, 700, function() {
-
-    //           $(this).children().removeClass('ui-icon-arrowthick-1-e').addClass('ui-icon-arrowthick-1-w');
-    //         });
-    //         $( "#board" ).animate({
-    //             width: "80%"
-    //         });
-    //         $(this).removeClass('hide').addClass('show');
-    //       }
-    // });
-
-    $('#title').click( function() {
-          if($(this).hasClass('show')){
-          $( "#main_btn" ).animate({
-            top: "+=32"
-            }, 300, function() {
-
-               $('#title').find("#project_btn span").removeClass('ui-icon-arrowthick-1-s').addClass('ui-icon-arrowthick-1-n');
-            });
-            $(this).removeClass('show').addClass('hide');
-          } else {
-          $( "#main_btn" ).animate({
-            top: "-=32"
-            }, 300, function() {
-              $('#title').find("#project_btn span").removeClass('ui-icon-arrowthick-1-n').addClass('ui-icon-arrowthick-1-s');
-            });
-            $(this).removeClass('hide').addClass('show');
-          }
-    })
-
-    $('#clear_board').click( function () {
+    $('#clear_board').on('click', function () {
          var confirm = window.confirm("This will delete all items and connections");
          if(confirm) {
             $('#board').empty();
@@ -123,7 +99,7 @@ $( document ).ready(function() {
          }
     });
 
-    $('#endpoints_btn').click( function() {
+    $('#endpoints_btn').on('click', function() {
             if($(this).hasClass('show')){
                       $( "#board .ep" ).animate({
                         opacity: "0"
@@ -138,7 +114,7 @@ $( document ).ready(function() {
                         $(this).removeClass('hide').addClass('show');
                       }
     });
-    $('#resizing_btn').click( function() {
+    $('#resizing_btn').on('click', function() {
             if($(this).hasClass('show')){
                         for (var i=0; i < item_count; i++) {
                             $("#item_"+i).resizable( "disable" );
@@ -155,7 +131,7 @@ $( document ).ready(function() {
                         $(this).removeClass('hide').addClass('show');
                       }
     });
-    $('#dragging_btn').click( function() {
+    $('#dragging_btn').on('click', function() {
             if($(this).hasClass('show')){
                         for (var i=0; i < item_count; i++) {
                             $("#item_"+i).draggable( "disable" );
@@ -173,6 +149,7 @@ $( document ).ready(function() {
                         $(this).removeClass('hide').addClass('show');
                       }
     });
+
     $('.ui-state-default').mouseenter(function() {jQuery(this).addClass('ui-state-hover');})
                           .mouseleave(function() {jQuery(this).removeClass('ui-state-hover');});
 
